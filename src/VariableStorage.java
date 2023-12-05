@@ -1,11 +1,13 @@
 public class VariableStorage {
-
+    // placeholder value for non-inputted values
     final double defaultValue = 0;
 
+    // values for momentum
     private double momentum_mass;
     private double momentum_velocity;
     private double momentum_momentum;
 
+    // values for elastic collisions
     private double elastic_massOfA;
     private double elastic_initialVelocityA;
     private double elastic_finalVelocityA;
@@ -13,6 +15,7 @@ public class VariableStorage {
     private double elastic_initialVelocityB;
     private double elastic_finalVelocityB;
 
+    // values for inelastic collisions
     private double inelastic_massOfA;
     private double inelastic_initialVelocityA;
     private double inelastic_massOfB;
@@ -20,6 +23,7 @@ public class VariableStorage {
     private double inelastic_finalVelocity;
     private double inelastic_finalMass;
 
+    // sets all the variables to 0
     public VariableStorage () {
         momentum_mass = defaultValue;
         momentum_velocity = defaultValue;
@@ -40,6 +44,7 @@ public class VariableStorage {
         inelastic_finalMass = defaultValue;
     }
 
+    // sets all the variables to a default value that was inputted
     public VariableStorage (double defaultValue) {
         momentum_mass = defaultValue;
         momentum_velocity = defaultValue;
@@ -180,6 +185,8 @@ public class VariableStorage {
         return inelastic_finalMass;
     }
 
+    // solves for other value when given two values
+    // the logic is in the Logic class
     public void Momentum_solveForMomentum() {
         momentum_momentum = momentum_mass * momentum_velocity;
     }

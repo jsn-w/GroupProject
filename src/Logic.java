@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Logic {
-
+    // instance variables
     private final double defVal;
     private VariableStorage storage;
     private Print p;
@@ -13,7 +13,7 @@ public class Logic {
         s = new Scanner(System.in);
         storage = new VariableStorage();
         p = new Print(storage);
-
+        // the program runs until the user chooses the option to quit
         int value = 0;
         while (value != 5) {
             Print.mainMenu();
@@ -34,8 +34,9 @@ public class Logic {
         return input;
     }
 
-
-    public void checkOption(int choice) { // displays corresponding options depending on input()
+    // displays corresponding options depending on input()
+    public void checkOption(int choice) {
+        // prints the values of the variables
         if (choice == 1) {
             System.out.print("Would you like all values to be printed? (y/n): \u001B[34m");
             String filler = s.nextLine();
@@ -45,14 +46,17 @@ public class Logic {
             } else {
                 printValues();
             }
+        // allows user to enter values
         } else if (choice == 2) {
             enterValues();
+        // allows user to practice questions
         } else if (choice == 3) {
             System.out.print("How many questions per practice set?: \u001B[34m");
             int numQuestions = s.nextInt();
             RESET_COLOR();
             s.nextLine();
             new PracticeProblems(numQuestions);
+        // clears all the values from the VariableStorage class
         } else if (choice == 4) {
             clearValues();
         }
@@ -71,7 +75,9 @@ public class Logic {
         p.inelasticValues();
     }
 
-
+    // input for momentum
+    // if the user already entered a value, they cannot re-enter it
+    // the user can input only if the value of the variable is default
     public void enterValues () {
         System.out.println("1) Momentum");
         System.out.println("\u001B[30mX) Elastic Collisions    (to be done in the future)");
@@ -147,6 +153,7 @@ public class Logic {
         RESET_COLOR();
     }
 
+    // reset colored text to plain text color
     public static void RESET_COLOR() {
         System.out.print("\u001B[0m");
     }

@@ -6,6 +6,7 @@ public class Print {
         n = store;
     }
 
+    // prints main menu of the program
     public static void mainMenu () {
         System.out.println("\u001B[36m-------------------------------------------------------\u001B[0m");
         System.out.println("MAIN MENU");
@@ -16,6 +17,7 @@ public class Print {
         System.out.println("\t5) Quit");
     }
 
+    // prints all values for momentum
     public void momentumValues () {
         System.out.println("\u001B[35m-------------- MOMENTUM --------------\u001B[0m");
 
@@ -41,6 +43,7 @@ public class Print {
         RESET_COLOR();
     }
 
+    // prints all values for elastic collisions
     public void elasticValues () {
         System.out.println("\u001B[35m--------- ELASTIC COLLISIONS ---------\u001B[0m");
         System.out.println("\t\u001B[30mObject A: ");
@@ -54,6 +57,7 @@ public class Print {
         RESET_COLOR();
     }
 
+    // prints all values for inelastic collisions
     public void inelasticValues () {
         System.out.println("\u001B[35m-------- INELASTIC COLLISIONS --------\u001B[0m");
         System.out.println("\t\u001B[30m  Object A: ");
@@ -67,6 +71,7 @@ public class Print {
         RESET_COLOR();
     }
 
+    // resets the color of the text to the default color
     public static void RESET_COLOR () {
         System.out.print("\u001B[0m");
     }

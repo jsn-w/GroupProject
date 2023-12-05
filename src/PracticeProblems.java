@@ -11,7 +11,8 @@ public class PracticeProblems {
         quit = false;
     }
 
-
+    // generate questions using random number generator
+    // if the user isn't quitting, the program gives more practice sets
     private void practiceQuestions(int numQuestions) {
         while (!quit){
             for (int i = 0; i < numQuestions; i++) {
@@ -44,7 +45,8 @@ public class PracticeProblems {
         }
     }
 
-
+    // the parameter is the correct answer
+    // the user is given 3 tries before the final answer is revealed.
     private void inputAnswer(double answer) {
         for (int i = 0; i < 3; i++) {
             System.out.print("Enter the correct answer (Attempt " + (i + 1) + "/3): \u001B[34m");
@@ -59,7 +61,10 @@ public class PracticeProblems {
         RESET_COLOR();
     }
 
-
+    // below are all the problems
+    // the values of the questions are randomly generated
+    // then, the user inputs the answer
+    // the explanation is printed afterward
     private void problemType1() {
         double mass_bag = (int) (Math.random() * 10) + 5;
         double velocity_bag = (int) (Math.random() * 10) + 1;
@@ -118,7 +123,7 @@ public class PracticeProblems {
     }
 
 
-    private void problemType4() {
+    private void problemType4() { // velocity
         double mass = (int) ((Math.random() * 1200) + (Math.random() * 1500));
         double momentum = (int) (((Math.random() * 100) + 30) * mass);
         double answer = Math.round(momentum / mass * 100) / 100.;
@@ -137,7 +142,7 @@ public class PracticeProblems {
     }
 
 
-    private void problemType5() {
+    private void problemType5() { // momentum
         double mass1 = (int) (Math.random() * 1000) + 1000;
         double mass2 = (int) (Math.random() * 1000) + 1000;
         double initialVelocity = (int) (Math.random() * 50) + 10;
@@ -157,7 +162,7 @@ public class PracticeProblems {
     }
 
 
-    private void problemType6(){
+    private void problemType6(){ // momentum/impulse
         double value2 = (int) ((Math.random() * 1200) + (Math.random() * 1500));;
         double value3 = (int) (Math.random()*20) + 10;
         double value4 = (int) (Math.random()*10) + 10;
@@ -185,6 +190,7 @@ public class PracticeProblems {
         System.out.println("\tJ = " + answer + " N * s");
     }
 
+    // resets colored text to default text color
     public static void RESET_COLOR () {
         System.out.print("\u001B[0m");
     }
