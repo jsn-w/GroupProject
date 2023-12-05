@@ -77,53 +77,53 @@ public class VariableStorage {
         momentum_momentum = momentum;
     }
 
-    public void setElasticMassOfA(double mass) {
-        elastic_massOfA = mass;
-    }
-
-    public void setElasticInitialVelocityA(double velocity) {
-        elastic_initialVelocityA = velocity;
-    }
-
-    public void setElasticFinalVelocityA(double velocity) {
-        elastic_finalVelocityA = velocity;
-    }
-
-    public void setElasticMassOfB(double mass) {
-        elastic_massOfB = mass;
-    }
-
-    public void setElasticInitialVelocityB(double velocity) {
-        elastic_initialVelocityB = velocity;
-    }
-
-    public void setElasticFinalVelocityB(double velocity) {
-        elastic_finalVelocityB = velocity;
-    }
-
-    public void setInelasticMassOfA(double mass) {
-        inelastic_massOfA = mass;
-    }
-
-    public void setInelasticInitialVelocityA(double velocity) {
-        inelastic_initialVelocityA = velocity;
-    }
-
-    public void setInelasticMassOfB(double mass) {
-        inelastic_massOfB = mass;
-    }
-
-    public void setInelasticInitialVelocityB(double velocity) {
-        inelastic_initialVelocityB = velocity;
-    }
-
-    public void setInelasticFinalVelocity(double velocity) {
-        inelastic_finalVelocity = velocity;
-    }
-
-    public void setInelasticFinalMass(double mass) {
-        inelastic_finalMass = mass;
-    }
+//    public void setElasticMassOfA(double mass) {
+//        elastic_massOfA = mass;
+//    }
+//
+//    public void setElasticInitialVelocityA(double velocity) {
+//        elastic_initialVelocityA = velocity;
+//    }
+//
+//    public void setElasticFinalVelocityA(double velocity) {
+//        elastic_finalVelocityA = velocity;
+//    }
+//
+//    public void setElasticMassOfB(double mass) {
+//        elastic_massOfB = mass;
+//    }
+//
+//    public void setElasticInitialVelocityB(double velocity) {
+//        elastic_initialVelocityB = velocity;
+//    }
+//
+//    public void setElasticFinalVelocityB(double velocity) {
+//        elastic_finalVelocityB = velocity;
+//    }
+//
+//    public void setInelasticMassOfA(double mass) {
+//        inelastic_massOfA = mass;
+//    }
+//
+//    public void setInelasticInitialVelocityA(double velocity) {
+//        inelastic_initialVelocityA = velocity;
+//    }
+//
+//    public void setInelasticMassOfB(double mass) {
+//        inelastic_massOfB = mass;
+//    }
+//
+//    public void setInelasticInitialVelocityB(double velocity) {
+//        inelastic_initialVelocityB = velocity;
+//    }
+//
+//    public void setInelasticFinalVelocity(double velocity) {
+//        inelastic_finalVelocity = velocity;
+//    }
+//
+//    public void setInelasticFinalMass(double mass) {
+//        inelastic_finalMass = mass;
+//    }
 
     public double getMomentumMass() {
         return momentum_mass;

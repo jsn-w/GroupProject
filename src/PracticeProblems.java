@@ -70,7 +70,8 @@ public class PracticeProblems {
         double velocity_bag = (int) (Math.random() * 10) + 1;
         double velocity_cart = (int) (Math.random() * 10) + 5;
         double mass_cart = (int) (Math.random() * 50) + 20;
-        double answer = Math.round((mass_bag * velocity_bag + velocity_cart * mass_cart) / (mass_bag + mass_cart) * 100) / 100.;
+        double initialMomentum = (mass_bag * velocity_bag + velocity_cart * mass_cart);
+        double answer = Math.round(initialMomentum / (mass_bag + mass_cart) * 100) / 100.;
 
         String question = "A bag, with a mass of " + mass_bag + " kg, is thrown onto a shopping cart at an initial velocity of " + velocity_bag + " m/s. ";
         question += "The shopping cart has a initial velocity of " + velocity_cart + " m/s with a mass of " + mass_cart + " kg. ";
@@ -81,6 +82,9 @@ public class PracticeProblems {
         System.out.println("\u001B[32mThe correct answer is " + answer + " m/s");
         RESET_COLOR();
         System.out.println("\tYou can use the equations p = mv and p(before) = p(after) to solve for the combined final velocity");
+        System.out.println("\tp(before): p = mv -> p = "+  initialMomentum + " (sum of the initial momentums for both the cart and bag)");
+        System.out.println("\tSet p(before) = p(after): " + initialMomentum + " = " + (mass_bag + mass_cart) + "v (The value before v is the total mass of the shopping cart and the bag)");
+        System.out.println("\tSolve for v: v = " + answer);
     }
 
 
@@ -149,7 +153,7 @@ public class PracticeProblems {
         double finalVelocity = (int) (Math.random() * 50);
         double answer = Math.round(((mass1 * initialVelocity) - (mass1 * finalVelocity)) / mass2 * 100) / 100.;
 
-        String question = "A " + mass1 + " kg car travelling at " + initialVelocity + " collides with a " + mass2 + " kg car at rest. ";
+        String question = "A " + mass1 + " kg car travelling at " + initialVelocity + " m/s collides with a " + mass2 + " kg car at rest. ";
         question += "If the " + mass1 + " kg car has a velocity of " + finalVelocity + " m/s after the collision, find the velocity of the " + mass2 + " kg car after the collision.";
         System.out.println(question);
         inputAnswer(answer);
@@ -157,8 +161,10 @@ public class PracticeProblems {
         System.out.println("\u001B[32mThe correct answer is: " + answer + " m/s");
         RESET_COLOR();
         System.out.println("\tSince momentum is conserved, the end velocity of the " + mass2 + " kg car can be solved using the equation p(initial) = p(final).");
-        System.out.println("\tp(initial) = sum of initial momentum of both cars");
-        System.out.println("\tp(final) = sum of final momentum of both cars");
+        System.out.println("\tp(initial) = " + (mass1 * initialVelocity));
+        System.out.println("\tp(final) = v2(" + mass2 + ") + " + (mass1 * finalVelocity));
+        System.out.println("\tSet p(initial) = p(final): " + (mass1 * initialVelocity) + " = v2(" + mass2 + ") + " + (mass1 * finalVelocity));
+        System.out.println("\tv2 = " + answer + " m/s");
     }
 
 
@@ -186,7 +192,7 @@ public class PracticeProblems {
         System.out.println("\tFnet = m * a");
         System.out.println("\tFnet = " + value2 + " kg * "+ value3 / value4 + " m/s^2 = " + value2*value3/value4 + "N");
         System.out.println("\tJ = Fnet * t");
-        System.out.println("\tJ = " + value2*value3/value4 + " N * " + value4 + " s");
+        System.out.println("\tJ = " + Math.round(value2*value3/value4*100)/100. + " N * " + value4 + " s");
         System.out.println("\tJ = " + answer + " N * s");
     }
 

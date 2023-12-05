@@ -14,12 +14,18 @@ public class Logic {
         storage = new VariableStorage();
         p = new Print(storage);
         // the program runs until the user chooses the option to quit
-        int value = 0;
-        while (value != 5) {
-            Print.mainMenu();
-            value = input(5);
-            checkOption(value);
+        int value;
+        try {
+            value = 0;
+            while (value != 5) {
+                Print.mainMenu();
+                value = input(5);
+                checkOption(value);
+            }
+        } catch (Exception e) {
+            System.out.println("Invalid input - ending code");
         }
+
     }
 
     // input checks for all integer inputs
@@ -46,17 +52,17 @@ public class Logic {
             } else {
                 printValues();
             }
-        // allows user to enter values
+            // allows user to enter values
         } else if (choice == 2) {
             enterValues();
-        // allows user to practice questions
+            // allows user to practice questions
         } else if (choice == 3) {
             System.out.print("How many questions per practice set?: \u001B[34m");
             int numQuestions = s.nextInt();
             RESET_COLOR();
             s.nextLine();
             new PracticeProblems(numQuestions);
-        // clears all the values from the VariableStorage class
+            // clears all the values from the VariableStorage class
         } else if (choice == 4) {
             clearValues();
         }
