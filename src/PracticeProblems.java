@@ -74,13 +74,13 @@ public class PracticeProblems {
 
         String question = "A bag, with a mass of " + mass_bag + " kg, is thrown onto a shopping cart at an initial velocity of " + velocity_bag + " m/s. ";
         question += "The shopping cart has a initial velocity of " + velocity_cart + " m/s with a mass of " + mass_cart + " kg. ";
-        question += "Find their combined final velocity. (Round to the hundredths place)";
+        question += "Find their combined final velocity.";
         System.out.println(question);
         inputAnswer(answer);
 
         System.out.println("\u001B[32mThe correct answer is " + answer + " m/s");
         RESET_COLOR();
-        System.out.println("\tYou can use the equations p = mv and pbefore = pafter to solve for the combined final velocity");
+        System.out.println("\tYou can use the equations p = mv and p(before) = p(after) to solve for the combined final velocity");
     }
 
 
@@ -163,14 +163,14 @@ public class PracticeProblems {
 
 
     private void problemType6(){ // momentum/impulse
-        double value2 = (int) ((Math.random() * 1200) + (Math.random() * 1500));;
+        double value2 = (int) ((Math.random() * 1200) + (Math.random() * 1500));
         double value3 = (int) (Math.random()*20) + 10;
         double value4 = (int) (Math.random()*10) + 10;
         double answer = value2 * value3;
 
-        String question = "Kara Less was applying her makeup when she drove into South's busy parking lot last Friday morning.";
-        question += "Kara's " + value2 + " kg car was moving at " + value3 + " m/s and stopped in " + value4 + " seconds:";
-        question += " find the impulse of Kara's car.";
+        String question = "Kara Less was applying her makeup when she drove into South's busy parking lot last Friday morning. ";
+        question += "Kara's " + value2 + " kg car was moving at " + value3 + " m/s and stopped in " + value4 + " seconds. ";
+        question += "Find the impulse of Kara's car.";
         System.out.println(question);
         inputAnswer(answer);
 

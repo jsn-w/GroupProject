@@ -62,7 +62,6 @@ public class Logic {
         }
     }
 
-
     // print values for momentum
     public void printValues () {
         p.momentumValues();
@@ -136,19 +135,19 @@ public class Logic {
         if (storage.getMomentumMomentum() == defVal && storage.getMomentumMass() != defVal && storage.getMomentumVelocity() != defVal) {
             storage.Momentum_solveForMomentum();
             System.out.print("\u001B[32mSince you have the value of mass and velocity, ");
-            System.out.println("momentum = " + storage.getMomentumMass() + " kg * " + storage.getMomentumVelocity() + " m/s = " + storage.getMomentumMomentum() + " kg * m/s");
+            System.out.println("momentum = (" + storage.getMomentumMass() + " kg) * (" + storage.getMomentumVelocity() + " m/s) = " + storage.getMomentumMomentum() + " kg * m/s");
         }
 
         if (storage.getMomentumMomentum() != defVal && storage.getMomentumMass() == defVal && storage.getMomentumVelocity() != defVal) {
             storage.Momentum_solveForMass();
             System.out.print("\u001B[32mSince you have the value of momentum and velocity, ");
-            System.out.println("mass = " + storage.getMomentumMomentum() + " kg * m/s / " + storage.getMomentumVelocity() + " m/s = " + storage.getMomentumMass() + " kg");
+            System.out.println("mass = (" + storage.getMomentumMomentum() + " kg * m/s) / (" + storage.getMomentumVelocity() + " m/s) = " + storage.getMomentumMass() + " kg");
         }
 
         if (storage.getMomentumMomentum() != defVal && storage.getMomentumMass() != defVal && storage.getMomentumVelocity() == defVal) {
             storage.Momentum_solveForVelocity();
             System.out.print("\u001B[32mSince you have the value of momentum and mass, ");
-            System.out.println("velocity = " + storage.getMomentumMomentum() + " kg * m/s / " + storage.getMomentumMass() + " kg = " + storage.getMomentumVelocity() + " m/s");
+            System.out.println("velocity = (" + storage.getMomentumMomentum() + " kg * m/s) / (" + storage.getMomentumMass() + " kg) = " + storage.getMomentumVelocity() + " m/s");
         }
         RESET_COLOR();
     }
